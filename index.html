@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cofrinho</title>
+</head>
+
+<body>
+    <div class="cofre">
+        <div class="porquinho">
+            <div class="olho olho-esquerdo"></div>
+            <div class="olho olho-direito"></div>
+            <div class="focinho"></div>
+            <div class="orelha-esquerda"></div>
+            <div class="orelha-direita"></div>
+            <div class="perna perna-esquerda"></div>
+            <div class="perna perna-direita"></div>
+        </div>
+    <div class="container">
+        <h1></h1>
+        <div class="menu">
+            <button id="adicionar">Adicionar Moeda</button>
+            <button id="remover">Remover Moeda</button>
+            <button id="listar">Listar Moedas</button>
+            <button id="calcular">Calcular total</button>
+            <button id="sair">Sair</button>
+        </div>
+        <!-- Modal Adicionar Moeda -->
+    <div id="add-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Adicionar Moeda</h2>
+            <label for="tipoMoeda">Escolha o tipo de moeda:</label>
+            <select id="tipoMoeda">
+                <option value="1">Real</option>
+                <option value="2">Dólar</option>
+                <option value="3">Euro</option>
+            </select>
+            <label for="valorMoeda">Digite o valor:</label>
+            <input type="number" id="valorMoeda" placeholder="Valor">
+            <button id="confirmarAdicionar">Adicionar Moeda</button>
+            <div id="mensagemAdicionar" class="mensagem"></div>
+        </div>
+    </div>
+
+    <!-- Modal Remover Moeda -->
+    <div id="remove-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Remover Moeda</h2>
+            <button id="confirmarRemover">Remover última Moeda</button>
+            <div id="mensagemRemover" class="mensagem"></div>
+        </div>
+    </div>
+
+    <!-- Modal Listar Moedas -->
+    <div id="list-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Listar Moedas</h2>
+            <div id="listarMoedas"></div>
+            <button id="fecharListar">Fechar</button>
+            <div id="mensagemListar" class="mensagem"></div>
+        </div>
+    </div>
+
+    <!-- Modal Calcular Total -->
+    <div id="total-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Calcular Total</h2>
+            <p id="totalValor"></p>
+            <button id="fecharTotal">Fechar</button>
+            <div id="mensagemCalcular" class="mensagem"></div>
+        </div>
+    </div>
+
+    <!-- Modal Sair -->
+    <div id="exit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Sair</h2>
+            <p>Você deseja sair?</p>
+            <button id="confirmarSair">Sim</button>
+            <button id="cancelarSair">Não</button>
+        </div>
+    </div>
+    
+    <div id="exit-message-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Saindo</h2>
+            <p>Saindo...</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Aléxia - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+<script src="./script.js"></script>
+
+
+</html>

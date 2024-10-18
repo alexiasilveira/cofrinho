@@ -1,0 +1,238 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'poppins';
+    background-color: #ffdcf0;
+    margin: 0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+.menu {
+    width: 400px;
+    height: 500px;
+    background-color: pink;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+button {
+    background-color: #ff85be;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 35px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #171718;
+}
+
+pre {
+    width: 450px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cofre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; /* Espaço adicional acima de toda a estrutura */
+}
+
+.porquinho {
+    width: 190px;
+    height: 150px;
+    background-color: pink;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: -35px; /* O porquinho fica em cima do quadrado */
+    z-index: 10; /* Para garantir que o porquinho fique acima do quadrado */
+    position: relative; /* Para controlar a sobreposição */
+}
+
+/* Detalhes do porquinho (orelhas) */
+.porquinho::before,
+.porquinho::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 50%;
+    top: -15px;
+}
+
+.porquinho::before {
+    left: 20px;
+    transform: rotate(-20deg); /* Orelha esquerda */
+}
+
+.porquinho::after {
+    right: 20px;
+    transform: rotate(20deg); /* Orelha direita */
+}
+/* Adicionando olhos ao porquinho */
+.porquinho .olho{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(8, 3, 3);
+    border-radius: 50%;
+    top: 50px;
+}
+
+.porquinho .olho-esquerdo {
+    left: 45px;
+
+}
+
+.porquinho .olho-direito {
+    right: 45px;
+}
+.porquinho .focinho {
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    background-color: black; /* Cor do focinho */
+    border-radius: 50%;
+    top: 85px; /* Abaixo dos olhos */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza no eixo X */
+}
+.quadrado {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(248, 245, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 100px; /* Ajuste do espaço entre o porquinho e o quadrado */
+    position: relative;
+    z-index: 1; /* Para garantir que o quadrado fique abaixo do porquinho */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaçamento aumentado entre os botões */
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #fdc9eb;
+}
+/* Estilo para o modal */
+.modal {
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 100;
+    top: 80px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 160, 205, 0.5); /* Fundo semitransparente */
+}
+
+.modal-content {
+    background-color: rgb(19, 15, 15);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #f9f9f9;
+
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#ok-btn {
+    background-color: #ff5fca; /* Cor verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 35px;
+    transition: background-color 0.3s ease;
+}
+
+#ok-btn:hover {
+    background-color: #dd1891;
+}
+.modal-content label {
+    color: #ffffff; /* Cor dos rótulos */
+    font-size: 25px; /* Tamanho da fonte dos rótulos */
+    display: block; /* Faz com que os rótulos ocupem uma linha inteira */
+    margin-bottom: 5px; /* Espaço abaixo dos rótulos */
+}
+.modal-content h2 {
+    color: #fc83d3; /* Cor do título */
+    font-size: 25px; /* Tamanho da fonte do título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+.modal-content input,
+.modal-content select {
+    width: 80%; /* Ocupa toda a largura do modal */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço abaixo dos inputs */
+    border: 1px solid #ffb9d9; /* Borda dos inputs */
+    border-radius: 4px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte dos inputs */
+}
+.mensagem {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    display: none; /* Inicialmente oculto */
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #020202;
+
+
+}
+
+
